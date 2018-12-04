@@ -45,7 +45,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand page-scroll" href="#page-top">Landscaper</a> </div>
+      <a class="navbar-brand page-scroll" href="#page-top">ගෙවත්ත landscaping</a> </div>
     
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -68,7 +68,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2 intro-text">
-            <h1>Landscaping Services</h1>
+            <h1>ගෙවත්ත landscaping</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
               Duis sed dapibus leo nec ornare diam.</p>
             <a href="#about" class="btn btn-custom btn-lg page-scroll">More Info</a> </div>
@@ -83,7 +83,7 @@
     <div class="row">
       <div class="col-xs-12 col-md-6">
         <div class="about-text">
-          <h2>Welcome to <span>Landscaper</span></h2>
+          <h2>Welcome to <span>ගෙවත්ත landscaping</span></h2>
           <hr>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
@@ -162,6 +162,7 @@
             <li><a href="#" data-filter=".lawn">Lawn Care</a></li>
             <li><a href="#" data-filter=".garden">Garden Care</a></li>
             <li><a href="#" data-filter=".planting">Planting</a></li>
+            
           </ol>
         </li>
       </ul>
