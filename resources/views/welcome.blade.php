@@ -29,6 +29,7 @@
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -115,34 +116,21 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
     </div>
     <div class="row">
+    @if(count($services)>0)
+                @foreach($services->all() as $service)
       <div class="col-md-3 text-center">
-        <div class="service-media"> <img src="img/services/service-1.jpg" alt=" "> </div>
+        <div class="service-media"> <img src={{$service->img_path}} alt=" "> </div>
         <div class="service-desc">
-          <h3>Lawn Care</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.</p>
+          <h3>{{$service->service_name}}</h3>
+          <p>{{$service->description}}</p>
         </div>
       </div>
-      <div class="col-md-3 text-center">
-        <div class="service-media"> <img src="img/services/service-2.jpg" alt=" "> </div>
-        <div class="service-desc">
-          <h3>Landscape Design</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.</p>
-        </div>
-      </div>
-      <div class="col-md-3 text-center">
-        <div class="service-media"> <img src="img/services/service-3.jpg" alt=" "> </div>
-        <div class="service-desc">
-          <h3>Tree Care</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.</p>
-        </div>
-      </div>
-      <div class="col-md-3 text-center">
-        <div class="service-media"> <img src="img/services/service-4.jpg" alt=" "> </div>
-        <div class="service-desc">
-          <h3>Spring & Fall Cleanup</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.</p>
-        </div>
-      </div>
+      @endforeach
+            @endif
+
+      
+     
+      
     </div>
   </div>
 </div>
@@ -157,104 +145,50 @@
     <div class="categories">
       <ul class="cat">
         <li>
+        
           <ol class="type">
             <li><a href="#" data-filter="*" class="active">All</a></li>
-            <li><a href="#" data-filter=".lawn">Lawn Care</a></li>
-            <li><a href="#" data-filter=".garden">Garden Care</a></li>
-            <li><a href="#" data-filter=".planting">Planting</a></li>
+            @if(count($projects)>0)
+                @foreach($projects->all() as $project)
+            <li><a href="#" data-filter=.{{$project->project_id}}>{{$project->project_name}}</a></li>
+                @endforeach
+            @endif
+           
             
           </ol>
         </li>
       </ul>
       <div class="clearfix"></div>
     </div>
+   
     <div class="row">
+       
       <div class="portfolio-items">
-        <div class="col-sm-6 col-md-4 lawn">
+          @if(count($images)>0)
+          @foreach($images->all() as $image)
+        <div class="col-sm-6 col-md-4 {{$image->project_id}}">
           <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/01-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
+            <div class="hover-bg"> <a href={{$image->img_path}} title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">
-                <h4>Lorem Ipsum</h4>
+                <h4>ගෙවත්ත landscaping</h4>
               </div>
-              <img src="img/portfolio/01-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
+              <img src={{$image->img_path}} class="img-responsive" alt="Project Title" height="1000" width="563"> </a> 
+            </div>
           </div>
-        </div>
-        <div class="col-sm-6 col-md-4 planting">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/02-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Adipiscing Elit</h4>
-              </div>
-              <img src="img/portfolio/02-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
           </div>
+          @endforeach
+          @endif
+         
         </div>
-        <div class="col-sm-6 col-md-4 lawn">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/03-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Lorem Ipsum</h4>
-              </div>
-              <img src="img/portfolio/03-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 lawn">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/04-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Lorem Ipsum</h4>
-              </div>
-              <img src="img/portfolio/04-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 planting">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/05-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Adipiscing Elit</h4>
-              </div>
-              <img src="img/portfolio/05-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 garden">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/06-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dolor Sit</h4>
-              </div>
-              <img src="img/portfolio/06-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 garden">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/07-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Dolor Sit</h4>
-              </div>
-              <img src="img/portfolio/07-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 lawn">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/08-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Lorem Ipsum</h4>
-              </div>
-              <img src="img/portfolio/08-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-4 planting">
-          <div class="portfolio-item">
-            <div class="hover-bg"> <a href="img/portfolio/09-large.jpg" title="Project Title" data-lightbox-gallery="gallery1">
-              <div class="hover-text">
-                <h4>Adipiscing Elit</h4>
-              </div>
-              <img src="img/portfolio/09-small.jpg" class="img-responsive" alt="Project Title"> </a> </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
+</div>
+</div>
+        
+        
+       
+   
+
+
 <!-- Testimonials Section -->
 <div id="testimonials" class="text-center">
   <div class="overlay">
@@ -296,13 +230,16 @@
       <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
     </div>
+    @if(count($profiles)>0)
+          @foreach($profiles->all() as $profile)
     <div class="col-md-10 col-md-offset-1 contact-info">
       <div class="col-md-4">
         <h3>Address</h3>
         <hr>
         <div class="contact-item">
-          <p>4321 California St,</p>
-          <p>San Francisco, CA 12345</p>
+          <p>80/1/A,</p>
+          <p>Andadola Road, Watareka</p>
+          <p>Padukka</p>
         </div>
       </div>
       <div class="col-md-4">
@@ -317,30 +254,34 @@
         <h3>Contact Info</h3>
         <hr>
         <div class="contact-item">
-          <p>Phone: +1 123 456 1234</p>
-          <p>Email: info@company.com</p>
+          <p>{{$profile->phone}}</p>
+          <p>{{$profile->email}}</p>
         </div>
       </div>
     </div>
+    @endforeach
+          @endif
+
     <div class="col-md-8 col-md-offset-2">
       <h3>Leave us a message</h3>
-      <form name="sentMessage" id="contactForm" novalidate>
+      <form  action="{{URL::to('/message')}}" method="post" >
+      {{ csrf_field() }}
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <input type="text" id="name" class="form-control" placeholder="Name" required="required">
+              <input type="text" id="name" class="form-control" placeholder="Name" required="required" name="name">
               <p class="help-block text-danger"></p>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+              <input type="email" id="email" class="form-control" placeholder="Email" required="required" name="email">
               <p class="help-block text-danger"></p>
             </div>
           </div>
         </div>
         <div class="form-group">
-          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required></textarea>
+          <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" name="message"required></textarea>
           <p class="help-block text-danger"></p>
         </div>
         <div id="success"></div>
