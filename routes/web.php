@@ -15,9 +15,9 @@ Route::get('/', 'CilentController@index');
 
 Route::post('/message', 'CilentController@message');
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/index', function () {
+    return view('index');
+});
 
 Auth::routes();
 
