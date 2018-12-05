@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
+    <title>Welcome To | Landscaping</title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -301,17 +301,39 @@
                         </a>
                         
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="{{url('/service')}}" class="menu-toggle">
                             <i class="material-icons">view_list</i>
                             <span>Services</span>
+                        </a>
+                        
+                    </li> -->
+                    <li >
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">assignment</i>
+                            <span>Services</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                            <a href="{{url('/service')}}" class="menu-toggle">Add Service</a>
+                            </li>
+                            <li >
+                                <a href="#">Remove| Hide Services </a>
+                            </li>
+                    
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" class="menu-toggle">
+                            <i class="material-icons">perm_media</i>
+                            <span >Profile</span>
                         </a>
                         
                     </li>
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">perm_media</i>
-                            <span >Profile</span>
+                            <span >Client Images</span>
                         </a>
                         
                     </li>
