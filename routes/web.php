@@ -18,6 +18,10 @@ Route::post('/message', 'CilentController@message');
 Route::get('/index', function () {
     return view('index');
 });
+Route::get('/service', function () {
+    return view('pages/forms/basic-form-elements');
+});
+
 
 Auth::routes();
 
