@@ -306,7 +306,7 @@
                 <ul class="list">
                     
                     <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
+                        <a href="{{url('/service')}};" class="menu-toggle">
                             <i class="material-icons">assignment</i>
                             <span>Projects</span>
                         </a>

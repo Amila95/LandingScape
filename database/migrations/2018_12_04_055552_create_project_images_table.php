@@ -18,6 +18,7 @@ class CreateProjectImagesTable extends Migration
             $table->String('img_path');
             $table->integer('project_id');
             $table->integer('service_id');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }
