@@ -56,6 +56,7 @@
         <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
         <li><a href="#testimonials" class="page-scroll">Testimonials</a></li>
         <li><a href="#contact" class="page-scroll">Contact</a></li>
+        <li><a href="http://localhost:8000/login" class="page-scroll">Login</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
