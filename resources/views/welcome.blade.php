@@ -148,9 +148,9 @@
         
           <ol class="type">
             <li><a href="#" data-filter="*" class="active">All</a></li>
-            @if(count($projects)>0)
-                @foreach($projects->all() as $project)
-            <li><a href="#" data-filter=.{{$project->project_id}}>{{$project->project_name}}</a></li>
+            @if(count($services)>0)
+                @foreach($services->all() as $services)
+            <li><a href="#" data-filter=.{{$services->service_id}}>{{$services->service_name}}</a></li>
                 @endforeach
             @endif
            
@@ -166,7 +166,7 @@
       <div class="portfolio-items">
           @if(count($images)>0)
           @foreach($images->all() as $image)
-        <div class="col-sm-6 col-md-4 {{$image->project_id}}">
+        <div class="col-sm-6 col-md-4 {{$image->service_id}}">
           <div class="portfolio-item">
             <div class="hover-bg"> <a href={{$image->img_path}} title="Project Title" data-lightbox-gallery="gallery1">
               <div class="hover-text">

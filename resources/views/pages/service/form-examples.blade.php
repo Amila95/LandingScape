@@ -2,33 +2,36 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Form Wizard | Bootstrap Based Admin Template - Material Design</title>
+    <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
     <!-- Favicon-->
-    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
-    <link href="../../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="{{asset('assets/backend/plugins/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
 
     <!-- Waves Effect Css -->
-    <link href="../../plugins/node-waves/waves.css" rel="stylesheet" />
+    <link href="{{asset('assets/backend/plugins/node-waves/waves.css')}}" rel="stylesheet" />
 
     <!-- Animation Css -->
-    <link href="../../plugins/animate-css/animate.css" rel="stylesheet" />
+    <link href="{{asset('assets/backend/plugins/animate-css/animate.css')}}" rel="stylesheet" />
 
-    <!-- Sweet Alert Css -->
-    <link href="../../plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+    <!-- Morris Chart Css-->
+    <link href="{{asset('assets/backend/plugins/morrisjs/morris.css')}}" rel="stylesheet" />
 
     <!-- Custom Css -->
-    <link href="../../css/style.css" rel="stylesheet">
+    <link href="{{asset('assets/backend/css/style.css')}}" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="../../css/themes/all-themes.css" rel="stylesheet" />
+    <link href="{{asset('assets/backend/css/theme/all-themes.css')}}" rel="stylesheet" />
+
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 </head>
 
 <body class="theme-red">
@@ -453,13 +456,13 @@
                             <li>
                                 <a href="../../pages/forms/advanced-form-elements.html">Advanced Form Elements</a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="../../pages/forms/form-examples.html">Form Examples</a>
                             </li>
                             <li>
                                 <a href="../../pages/forms/form-validation.html">Form Validation</a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="../../pages/forms/form-wizard.html">Form Wizard</a>
                             </li>
                             <li>
@@ -794,17 +797,17 @@
     <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>
-                    FORM WIZARD
-                    <small>Taken from <a href="https://github.com/rstaib/jquery-steps" target="_blank">github.com/rstaib/jquery-steps</a> & <a href="https://jqueryvalidation.org/" target="_blank">jqueryvalidation.org</a></small>
-                </h2>
+                <h2>FORM EXAMPLES</h2>
             </div>
-            <!-- Basic Example | Horizontal Layout -->
+
+            <!-- Vertical Layout -->
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>BASIC EXAMPLE - HORIZONTAL LAYOUT</h2>
+                            <h2>
+                                VERTICAL LAYOUT
+                            </h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -819,219 +822,399 @@
                             </ul>
                         </div>
                         <div class="body">
-                            <div id="wizard_horizontal">
-                                <h2>First Step</h2>
-                                <section>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nulla nunc. Maecenas
-                                        arcu sem, hendrerit a tempor quis, sagittis accumsan tellus. In hac habitasse platea
-                                        dictumst. Donec a semper dui. Nunc eget quam libero. Nam at felis metus. Nam tellus
-                                        dolor, tristique ac tempus nec, iaculis quis nisi.
-                                    </p>
-                                </section>
-
-                                <h2>Second Step</h2>
-                                <section>
-                                    <p>
-                                        Donec mi sapien, hendrerit nec egestas a, rutrum vitae dolor. Nullam venenatis diam ac
-                                        ligula elementum pellentesque. In lobortis sollicitudin felis non eleifend. Morbi
-                                        tristique tellus est, sed tempor elit. Morbi varius, nulla quis condimentum dictum,
-                                        nisi elit condimentum magna, nec venenatis urna quam in nisi. Integer hendrerit sapien
-                                        a diam adipiscing consectetur. In euismod augue ullamcorper leo dignissim quis elementum
-                                        arcu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo
-                                        velit, blandit ac tempor nec, ultrices id diam. Donec metus lacus, rhoncus sagittis
-                                        iaculis nec, malesuada a diam. Donec non pulvinar urna. Aliquam id velit lacus.
-                                    </p>
-                                </section>
-
-                                <h2>Third Step</h2>
-                                <section>
-                                    <p>
-                                        Morbi ornare tellus at elit ultrices id dignissim lorem elementum. Sed eget nisl at justo
-                                        condimentum dapibus. Fusce eros justo, pellentesque non euismod ac, rutrum sed quam.
-                                        Ut non mi tortor. Vestibulum eleifend varius ullamcorper. Aliquam erat volutpat.
-                                        Donec diam massa, porta vel dictum sit amet, iaculis ac massa. Sed elementum dui
-                                        commodo lectus sollicitudin in auctor mauris venenatis.
-                                    </p>
-                                </section>
-
-                                <h2>Forth Step</h2>
-                                <section>
-                                    <p>
-                                        Quisque at sem turpis, id sagittis diam. Suspendisse malesuada eros posuere mauris vehicula
-                                        vulputate. Aliquam sed sem tortor. Quisque sed felis ut mauris feugiat iaculis nec
-                                        ac lectus. Sed consequat vestibulum purus, imperdiet varius est pellentesque vitae.
-                                        Suspendisse consequat cursus eros, vitae tempus enim euismod non. Nullam ut commodo
-                                        tortor.
-                                    </p>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- #END# Basic Example | Horizontal Layout -->
-            <!-- Basic Example | Vertical Layout -->
-            <div class="row clearfix">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>BASIC EXAMPLE - VERTICAL LAYOUT</h2>
-                            <ul class="header-dropdown m-r--5">
-                                <li class="dropdown">
-                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                        <i class="material-icons">more_vert</i>
-                                    </a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="javascript:void(0);">Action</a></li>
-                                        <li><a href="javascript:void(0);">Another action</a></li>
-                                        <li><a href="javascript:void(0);">Something else here</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="body">
-                            <div id="wizard_vertical">
-                                <h2>First Step</h2>
-                                <section>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nulla nunc. Maecenas
-                                        arcu sem, hendrerit a tempor quis, sagittis accumsan tellus. In hac habitasse platea
-                                        dictumst. Donec a semper dui. Nunc eget quam libero. Nam at felis metus. Nam tellus
-                                        dolor, tristique ac tempus nec, iaculis quis nisi.
-                                    </p>
-                                </section>
-
-                                <h2>Second Step</h2>
-                                <section>
-                                    <p>
-                                        Donec mi sapien, hendrerit nec egestas a, rutrum vitae dolor. Nullam venenatis diam ac
-                                        ligula elementum pellentesque. In lobortis sollicitudin felis non eleifend. Morbi
-                                        tristique tellus est, sed tempor elit. Morbi varius, nulla quis condimentum dictum,
-                                        nisi elit condimentum magna, nec venenatis urna quam in nisi. Integer hendrerit sapien
-                                        a diam adipiscing consectetur. In euismod augue ullamcorper leo dignissim quis elementum
-                                        arcu porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum leo
-                                        velit, blandit ac tempor nec, ultrices id diam. Donec metus lacus, rhoncus sagittis
-                                        iaculis nec, malesuada a diam. Donec non pulvinar urna. Aliquam id velit lacus.
-                                    </p>
-                                </section>
-
-                                <h2>Third Step</h2>
-                                <section>
-                                    <p>
-                                        Morbi ornare tellus at elit ultrices id dignissim lorem elementum. Sed eget nisl at justo
-                                        condimentum dapibus. Fusce eros justo, pellentesque non euismod ac, rutrum sed quam.
-                                        Ut non mi tortor. Vestibulum eleifend varius ullamcorper. Aliquam erat volutpat.
-                                        Donec diam massa, porta vel dictum sit amet, iaculis ac massa. Sed elementum dui
-                                        commodo lectus sollicitudin in auctor mauris venenatis.
-                                    </p>
-                                </section>
-
-                                <h2>Forth Step</h2>
-                                <section>
-                                    <p>
-                                        Quisque at sem turpis, id sagittis diam. Suspendisse malesuada eros posuere mauris vehicula
-                                        vulputate. Aliquam sed sem tortor. Quisque sed felis ut mauris feugiat iaculis nec
-                                        ac lectus. Sed consequat vestibulum purus, imperdiet varius est pellentesque vitae.
-                                        Suspendisse consequat cursus eros, vitae tempus enim euismod non. Nullam ut commodo
-                                        tortor.
-                                    </p>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- #END# Basic Example | Vertical Layout -->
-            <!-- Advanced Form Example With Validation -->
-            <div class="row clearfix">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>ADVANCED FORM EXAMPLE WITH VALIDATION</h2>
-                            <ul class="header-dropdown m-r--5">
-                                <li class="dropdown">
-                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                        <i class="material-icons">more_vert</i>
-                                    </a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="javascript:void(0);">Action</a></li>
-                                        <li><a href="javascript:void(0);">Another action</a></li>
-                                        <li><a href="javascript:void(0);">Something else here</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="body">
-                            <form id="wizard_with_validation" method="POST">
-                                <h3>Account Information</h3>
-                                <fieldset>
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="text" class="form-control" name="username" required>
-                                            <label class="form-label">Username*</label>
-                                        </div>
+                            <form>
+                                <label for="email_address">Email Address</label>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="text" id="email_address" class="form-control" placeholder="Enter your email address">
                                     </div>
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="password" class="form-control" name="password" id="password" required>
-                                            <label class="form-label">Password*</label>
-                                        </div>
+                                </div>
+                                <label for="password">Password</label>
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="password" id="password" class="form-control" placeholder="Enter your password">
                                     </div>
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="password" class="form-control" name="confirm" required>
-                                            <label class="form-label">Confirm Password*</label>
-                                        </div>
-                                    </div>
-                                </fieldset>
+                                </div>
 
-                                <h3>Profile Information</h3>
-                                <fieldset>
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="text" name="name" class="form-control" required>
-                                            <label class="form-label">First Name*</label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="text" name="surname" class="form-control" required>
-                                            <label class="form-label">Last Name*</label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="email" name="email" class="form-control" required>
-                                            <label class="form-label">Email*</label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <textarea name="address" cols="30" rows="3" class="form-control no-resize" required></textarea>
-                                            <label class="form-label">Address*</label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input min="18" type="number" name="age" class="form-control" required>
-                                            <label class="form-label">Age*</label>
-                                        </div>
-                                        <div class="help-info">The warning step will show up if age is less than 18</div>
-                                    </div>
-                                </fieldset>
-
-                                <h3>Terms & Conditions - Finish</h3>
-                                <fieldset>
-                                    <input id="acceptTerms-2" name="acceptTerms" type="checkbox" required>
-                                    <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
-                                </fieldset>
+                                <input type="checkbox" id="remember_me" class="filled-in">
+                                <label for="remember_me">Remember Me</label>
+                                <br>
+                                <button type="button" class="btn btn-primary m-t-15 waves-effect">LOGIN</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- #END# Advanced Form Example With Validation -->
+            <!-- #END# Vertical Layout -->
+            <!-- Vertical Layout | With Floating Label -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                VERTICAL LAYOUT
+                                <small>With floating label</small>
+                            </h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <form>
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="text" id="email_address" class="form-control">
+                                        <label class="form-label">Email Address</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="password" id="password" class="form-control">
+                                        <label class="form-label">Password</label>
+                                    </div>
+                                </div>
+
+                                <input type="checkbox" id="remember_me_2" class="filled-in">
+                                <label for="remember_me_2">Remember Me</label>
+                                <br>
+                                <button type="button" class="btn btn-primary m-t-15 waves-effect">LOGIN</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Vertical Layout | With Floating Label -->
+            <!-- Horizontal Layout -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                HORIZONTAL LAYOUT
+                            </h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <form class="form-horizontal">
+                                <div class="row clearfix">
+                                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                        <label for="email_address_2">Email Address</label>
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" id="email_address_2" class="form-control" placeholder="Enter your email address">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row clearfix">
+                                    <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                        <label for="password_2">Password</label>
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="password" id="password_2" class="form-control" placeholder="Enter your password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row clearfix">
+                                    <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
+                                        <input type="checkbox" id="remember_me_3" class="filled-in">
+                                        <label for="remember_me_3">Remember Me</label>
+                                    </div>
+                                </div>
+                                <div class="row clearfix">
+                                    <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-5">
+                                        <button type="button" class="btn btn-primary m-t-15 waves-effect">LOGIN</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Horizontal Layout -->
+            <!-- Inline Layout -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                INLINE LAYOUT
+                            </h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <form>
+                                <div class="row clearfix">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control" placeholder="Email Address">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <div class="form-group">
+                                            <div class="form-line">
+                                                <input type="password" class="form-control" placeholder="Password">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <input type="checkbox" id="remember_me_4" class="filled-in">
+                                        <label for="remember_me_4">Remember Me</label>
+                                        <button type="button" class="btn btn-primary btn-lg m-l-15 waves-effect">LOGIN</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Inline Layout -->
+            <!-- Inline Layout | With Floating Label -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                INLINE LAYOUT
+                                <small>With floating label</small>
+                            </h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <form>
+                                <div class="row clearfix">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="text" class="form-control">
+                                                <label class="form-label">Email Address</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                                        <div class="form-group form-float">
+                                            <div class="form-line">
+                                                <input type="password" class="form-control">
+                                                <label class="form-label">Password</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <input type="checkbox" id="remember_me_5" class="filled-in">
+                                        <label for="remember_me_5">Remember Me</label>
+                                        <button type="button" class="btn btn-primary btn-lg m-l-15 waves-effect">LOGIN</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Inline Layout | With Floating Label -->
+            <!-- Multi Column -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                MULTI COLUMN
+                            </h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-12">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-6">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-6">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-4">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-4">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-4">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-3">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row clearfix">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-2">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-2">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-2">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-2">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-2">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="col-md-2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Multi Column -->
         </div>
     </section>
 
@@ -1047,23 +1230,14 @@
     <!-- Slimscroll Plugin Js -->
     <script src="../../plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
 
-    <!-- Jquery Validation Plugin Css -->
-    <script src="../../plugins/jquery-validation/jquery.validate.js"></script>
-
-    <!-- JQuery Steps Plugin Js -->
-    <script src="../../plugins/jquery-steps/jquery.steps.js"></script>
-
-    <!-- Sweet Alert Plugin Js -->
-    <script src="../../plugins/sweetalert/sweetalert.min.js"></script>
-
     <!-- Waves Effect Plugin Js -->
     <script src="../../plugins/node-waves/waves.js"></script>
 
     <!-- Custom Js -->
     <script src="../../js/admin.js"></script>
-    <script src="../../js/pages/forms/form-wizard.js"></script>
 
     <!-- Demo Js -->
     <script src="../../js/demo.js"></script>
 </body>
+
 </html>

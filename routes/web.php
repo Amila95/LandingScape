@@ -19,8 +19,14 @@ Route::get('/index', function () {
     return view('index');
 });
 Route::get('/service', function () {
-    return view('pages/forms/basic-form-elements');
+    return view('pages/service/add_service');
 });
+
+Route::get('/form', function () {
+    return view('pages/service/advanced-form-elements');
+});
+
+
 
 Auth::routes();
 

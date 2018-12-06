@@ -2,33 +2,36 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Form Validation | Bootstrap Based Admin Template - Material Design</title>
+    <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
     <!-- Favicon-->
-    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Core Css -->
-    <link href="../../plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="{{asset('assets/backend/plugins/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
 
     <!-- Waves Effect Css -->
-    <link href="../../plugins/node-waves/waves.css" rel="stylesheet" />
+    <link href="{{asset('assets/backend/plugins/node-waves/waves.css')}}" rel="stylesheet" />
 
     <!-- Animation Css -->
-    <link href="../../plugins/animate-css/animate.css" rel="stylesheet" />
+    <link href="{{asset('assets/backend/plugins/animate-css/animate.css')}}" rel="stylesheet" />
 
-    <!-- Sweet Alert Css -->
-    <link href="../../plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+    <!-- Morris Chart Css-->
+    <link href="{{asset('assets/backend/plugins/morrisjs/morris.css')}}" rel="stylesheet" />
 
     <!-- Custom Css -->
-    <link href="../../css/style.css" rel="stylesheet">
+    <link href="{{asset('assets/backend/css/style.css')}}" rel="stylesheet">
 
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
-    <link href="../../css/themes/all-themes.css" rel="stylesheet" />
+    <link href="{{asset('assets/backend/css/theme/all-themes.css')}}" rel="stylesheet" />
+
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 </head>
 
 <body class="theme-red">
@@ -456,13 +459,13 @@
                             <li>
                                 <a href="../../pages/forms/form-examples.html">Form Examples</a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="../../pages/forms/form-validation.html">Form Validation</a>
                             </li>
                             <li>
                                 <a href="../../pages/forms/form-wizard.html">Form Wizard</a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="../../pages/forms/editors.html">Editors</a>
                             </li>
                         </ul>
@@ -794,157 +797,17 @@
     <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>
-                    FORM VALIDATION
-                    <small>Taken from <a href="https://jqueryvalidation.org/" target="_blank">jqueryvalidation.org</a></small>
-                </h2>
+                <h2>EDITORS</h2>
             </div>
-            <!-- Basic Validation -->
-            <div class="row clearfix">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>BASIC VALIDATION</h2>
-                            <ul class="header-dropdown m-r--5">
-                                <li class="dropdown">
-                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                        <i class="material-icons">more_vert</i>
-                                    </a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="javascript:void(0);">Action</a></li>
-                                        <li><a href="javascript:void(0);">Another action</a></li>
-                                        <li><a href="javascript:void(0);">Something else here</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="body">
-                            <form id="form_validation" method="POST">
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="name" required>
-                                        <label class="form-label">Name</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="surname" required>
-                                        <label class="form-label">Surname</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="email" class="form-control" name="email" required>
-                                        <label class="form-label">Email</label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="radio" name="gender" id="male" class="with-gap">
-                                    <label for="male">Male</label>
 
-                                    <input type="radio" name="gender" id="female" class="with-gap">
-                                    <label for="female" class="m-l-20">Female</label>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <textarea name="description" cols="30" rows="5" class="form-control no-resize" required></textarea>
-                                        <label class="form-label">Description</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="password" class="form-control" name="password" required>
-                                        <label class="form-label">Password</label>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox" name="checkbox">
-                                    <label for="checkbox">I have read and accept the terms</label>
-                                </div>
-                                <button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- #END# Basic Validation -->
-            <!-- Advanced Validation -->
-            <div class="row clearfix">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>ADVANCED VALIDATION</h2>
-                            <ul class="header-dropdown m-r--5">
-                                <li class="dropdown">
-                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                        <i class="material-icons">more_vert</i>
-                                    </a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="javascript:void(0);">Action</a></li>
-                                        <li><a href="javascript:void(0);">Another action</a></li>
-                                        <li><a href="javascript:void(0);">Something else here</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="body">
-                            <form id="form_advanced_validation" method="POST">
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="minmaxlength" maxlength="10" minlength="3" required>
-                                        <label class="form-label">Min/Max Length</label>
-                                    </div>
-                                    <div class="help-info">Min. 3, Max. 10 characters</div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="minmaxvalue" min="10" max="200" required>
-                                        <label class="form-label">Min/Max Value</label>
-                                    </div>
-                                    <div class="help-info">Min. Value: 10, Max. Value: 200</div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="url" class="form-control" name="url" required>
-                                        <label class="form-label">Url</label>
-                                    </div>
-                                    <div class="help-info">Starts with http://, https://, ftp:// etc</div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="date" required>
-                                        <label class="form-label">Date</label>
-                                    </div>
-                                    <div class="help-info">YYYY-MM-DD format</div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="number" class="form-control" name="number" required>
-                                        <label class="form-label">Number</label>
-                                    </div>
-                                    <div class="help-info">Numbers only</div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" class="form-control" name="creditcard" pattern="[0-9]{13,16}" required>
-                                        <label class="form-label">Credit Card</label>
-                                    </div>
-                                    <div class="help-info">Ex: 1234-5678-9012-3456</div>
-                                </div>
-                                <button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- #END# Advanced Validation -->
-            <!-- Validation Stats -->
+            <!-- CKEditor -->
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
                             <h2>
-                                VALIDATION STATS
+                                CKEDITOR
+                                <small>CKEditor is a ready-for-use HTML text editor designed to simplify web content creation. Taken from <a href="http://ckeditor.com/" target="_blank">ckeditor.com</a></small>
                             </h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
@@ -960,31 +823,67 @@
                             </ul>
                         </div>
                         <div class="body">
-                            <form id="form_validation_stats">
-                                <div class="form-group form-float">
-                                    <div class="form-line focused warning">
-                                        <input type="text" class="form-control" name="warning" value="Warning" required>
-                                        <label class="form-label">Form Validation - Warning</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line focused error">
-                                        <input type="text" class="form-control" name="error" value="Error" required>
-                                        <label class="form-label">Form Validation - Error</label>
-                                    </div>
-                                </div>
-                                <div class="form-group form-float">
-                                    <div class="form-line focused success">
-                                        <input type="email" class="form-control" name="success" value="Success" required>
-                                        <label class="form-label">Form Validation - Success</label>
-                                    </div>
-                                </div>
-                            </form>
+                            <textarea id="ckeditor">
+                                <h2>WYSIWYG Editor</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper sapien non nisl facilisis bibendum in quis tellus. Duis in urna bibendum turpis pretium fringilla. Aenean neque velit, porta eget mattis ac, imperdiet quis nisi. Donec non dui et tortor vulputate luctus. Praesent consequat rhoncus velit, ut molestie arcu venenatis sodales.</p>
+                                <h3>Lacinia</h3>
+                                <ul>
+                                    <li>Suspendisse tincidunt urna ut velit ullamcorper fermentum.</li>
+                                    <li>Nullam mattis sodales lacus, in gravida sem auctor at.</li>
+                                    <li>Praesent non lacinia mi.</li>
+                                    <li>Mauris a ante neque.</li>
+                                    <li>Aenean ut magna lobortis nunc feugiat sagittis.</li>
+                                </ul>
+                                <h3>Pellentesque adipiscing</h3>
+                                <p>Maecenas quis ante ante. Nunc adipiscing rhoncus rutrum. Pellentesque adipiscing urna mi, ut tempus lacus ultrices ac. Pellentesque sodales, libero et mollis interdum, dui odio vestibulum dolor, eu pellentesque nisl nibh quis nunc. Sed porttitor leo adipiscing venenatis vehicula. Aenean quis viverra enim. Praesent porttitor ut ipsum id ornare.</p>
+                            </textarea>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- #END# Validation Stats -->
+            <!-- #END# CKEditor -->
+            <!-- TinyMCE -->
+            <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                TINYMCE
+                                <small>Taken from <a href="https://www.tinymce.com" target="_blank">www.tinymce.com</a></small>
+                            </h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <textarea id="tinymce">
+                                <h2>WYSIWYG Editor</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ullamcorper sapien non nisl facilisis bibendum in quis tellus. Duis in urna bibendum turpis pretium fringilla. Aenean neque velit, porta eget mattis ac, imperdiet quis nisi. Donec non dui et tortor vulputate luctus. Praesent consequat rhoncus velit, ut molestie arcu venenatis sodales.</p>
+                                <h3>Lacinia</h3>
+                                <ul>
+                                    <li>Suspendisse tincidunt urna ut velit ullamcorper fermentum.</li>
+                                    <li>Nullam mattis sodales lacus, in gravida sem auctor at.</li>
+                                    <li>Praesent non lacinia mi.</li>
+                                    <li>Mauris a ante neque.</li>
+                                    <li>Aenean ut magna lobortis nunc feugiat sagittis.</li>
+                                </ul>
+                                <h3>Pellentesque adipiscing</h3>
+                                <p>Maecenas quis ante ante. Nunc adipiscing rhoncus rutrum. Pellentesque adipiscing urna mi, ut tempus lacus ultrices ac. Pellentesque sodales, libero et mollis interdum, dui odio vestibulum dolor, eu pellentesque nisl nibh quis nunc. Sed porttitor leo adipiscing venenatis vehicula. Aenean quis viverra enim. Praesent porttitor ut ipsum id ornare.</p>
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# TinyMCE -->
         </div>
     </section>
 
@@ -1000,21 +899,18 @@
     <!-- Slimscroll Plugin Js -->
     <script src="../../plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
 
-    <!-- Jquery Validation Plugin Css -->
-    <script src="../../plugins/jquery-validation/jquery.validate.js"></script>
-
-    <!-- JQuery Steps Plugin Js -->
-    <script src="../../plugins/jquery-steps/jquery.steps.js"></script>
-
-    <!-- Sweet Alert Plugin Js -->
-    <script src="../../plugins/sweetalert/sweetalert.min.js"></script>
-
     <!-- Waves Effect Plugin Js -->
     <script src="../../plugins/node-waves/waves.js"></script>
 
+    <!-- Ckeditor -->
+    <script src="../../plugins/ckeditor/ckeditor.js"></script>
+
+    <!-- TinyMCE -->
+    <script src="../../plugins/tinymce/tinymce.js"></script>
+
     <!-- Custom Js -->
     <script src="../../js/admin.js"></script>
-    <script src="../../js/pages/forms/form-validation.js"></script>
+    <script src="../../js/pages/forms/editors.js"></script>
 
     <!-- Demo Js -->
     <script src="../../js/demo.js"></script>
