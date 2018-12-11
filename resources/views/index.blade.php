@@ -296,7 +296,7 @@
                     
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">assignment</i>
+                            <i class="material-icons"></i>
                             <span>Projects</span>
                         </a>
                         
@@ -310,29 +310,29 @@
                     </li> -->
                     <li >
                         <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">assignment</i>
+                            <i class="material-icons"></i>
                             <span>Services</span>
                         </a>
                         <ul class="ml-menu">
                             <li>
-                            <a href="{{url('/service')}}" class="menu-toggle">Add Service</a>
+                            <a href="{{url('/service')}}" class="menu-toggle">New Service </a>
                             </li>
                             <li >
-                                <a href="#">Remove| Hide Services </a>
+                                <a href="/modify_service"  class="menu-toggle">Remove| Hide Services </a>
                             </li>
                     
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">perm_media</i>
+                            <i class="material-icons"></i>
                             <span >Profile</span>
                         </a>
                         
                     </li>
                     <li>
                         <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">perm_media</i>
+                            <i class="material-icons"></i>
                             <span >Client Images</span>
                         </a>
                         

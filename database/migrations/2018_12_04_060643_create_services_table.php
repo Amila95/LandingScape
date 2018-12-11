@@ -17,7 +17,7 @@ class CreateServicesTable extends Migration
             $table->increments('service_id');
             $table->String('service_name');
             $table->String('description');
-            $table->String('img_path');
+            $table->String('img_path')->nullable();
             
             $table->timestamps();
         });

@@ -18,9 +18,9 @@ Route::post('/message', 'CilentController@message');
 Route::get('/index', function () {
     return view('index');
 });
-Route::get('/service', function () {
-    return view('pages/service/add_service');
-});
+Route::get('/service', 'ServiceController@index');
+Route::post('/new_service','ServiceController@add_service');
+Route::get('/modify_service', 'ServiceController@view_service');
 
 Route::get('/form', function () {
     return view('pages/service/advanced-form-elements');

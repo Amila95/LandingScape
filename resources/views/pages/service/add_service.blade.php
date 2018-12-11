@@ -12,15 +12,23 @@
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
+                    @if(session('response'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{session('response')}}  
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>          
+                        </div>
+                    @endif
 
-                      <form action="" method='post' >
+                      <form action="/new_service" method='post' >
                             {{csrf_field()}}  
                         <div class="body">
                         <h2 class="card-inside-title">Service Name</h2>
                         <div class="row">                        <div class="col-sm-6">
                                     <div class="form-group">
                                         <div class="form-line focused">
-                                            <input type="text" class="form-control"  placeholder="Service Name " />
+                                            <input type="text" class="form-control"  placeholder="Service Name "  name="service"/>
                                         </div>
                                     </div>
                                 </div>
@@ -32,7 +40,7 @@
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <div class="form-line">
-                                            <textarea rows="4" class="form-control no-resize" placeholder="Description"></textarea>
+                                            <textarea rows="2" class="form-control no-resize" placeholder="Description" name="description"></textarea>
                                         </div>
                                     </div>
                                 </div>
